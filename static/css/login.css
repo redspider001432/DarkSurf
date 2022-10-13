@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: black;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    height: 500px;
+    width: 800px;
+    border: 1px solid black;
+    margin: 100px auto auto;
+    background: white;
+    position: relative;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    background: white;
+}
+.form h2{
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 40px;
+    background: white;
+    color: red;
+}
+.box{
+    padding: 12px;
+    width: 65%;
+    margin: 15px;
+    outline: none;
+    border-radius: 50px;
+    border: 1px solid black;
+    background: white;
+    font-weight: bold;
+}
+.login{
+    width: 65%;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    background: white;
+    font-size: 18px;
+    margin-top: 5px;
+    color: red;
+    font-weight: bolder;
+    border: 2px solid red;
+}
+.login:hover{
+    cursor: pointer;
+    background: red;
+    color: white;
+}
+.form a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    background: white;
+}
+.form a:hover{
+    font-weight: bold;
+}
+.side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: black;
+}
+.side img{
+    width: 550px;
+    height: 550px;
+    background: black;
+    transform: translateX(100px);
+}
+h5{
+    color: green;
+    background-color: white;
+}
+
+
+

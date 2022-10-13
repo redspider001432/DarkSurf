@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DarkSurf</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<nav class="nav-desktop">
+    <div class="desktop-logo">DarkSurF</div><div class="logo">DarkSUrF</div>
+    <ul>
+        <li><a class="item-1" href={% url 'login' %}>Log-In</a></li>
+        <li><a class="item-2" href={% url 'register' %}>Sign-Up</a></li>
+        <li><a class="item-3" href={% url 'about' %}>About</a></li>
+    </ul>
+</nav>
+<nav class="nav-mob">
+    <div class="logo">DarkSurF</div>
+    <ul class="mob-ul">
+        <li><a class="mob-1" href={% url 'login' %}>Log-In</a></li>
+        <li><a class="mob-2" href={% url 'register' %}>Sign-Up</a></li>
+        <li><a class="mob-3" href={% url 'about' %}>About</a></li>
+    </ul>
+</nav>
+<section class="bg"></section>
+</body>
+</html>

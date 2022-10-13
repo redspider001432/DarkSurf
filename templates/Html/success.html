@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Verified!!!</title>
+    {% load static %}
+    <link rel="stylesheet" href={% static 'css/success.css' %}>
+</head>
+<body>
+    <div class="container">
+        <form class="form" action={% url 'login' %} method="post">
+            {% csrf_token %}
+            <h3>Verified</h3>
+            <h4>Please Login</h4>
+            <input class="login" type="submit" value="Log-In">
+        </form>
+    </div>
+</body>
+</html>
