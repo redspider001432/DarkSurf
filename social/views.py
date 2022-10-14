@@ -21,14 +21,12 @@ def posts(request):
     return render(request, 'Html/posts.html', {'posts': posts})
 
 
-@csrf_exempt
 @login_required(login_url='login')
 def upload(request):
     if request.method == 'POST':
         user = request.user.username
         image = request.FILES.get('image-file')
         write = request.POST['write-post']
-
         new_post = Post.objects.create(user=user, image=image, write=write)
         new_post.save()
         return redirect('posts')
@@ -36,11 +34,11 @@ def upload(request):
         return redirect('posts')
 
 
-class PostListView(View):
-    def get(self, request, *args, **kwargs):
-        posts_lists = Post.objects.all().order_by('createdOn')
-
-        context = {
-            'post_list': posts_lists,
-        }
-        return render(request, 'Html/posts.html', context)
+# class PostListView(View):
+#     def get(self, request, *args, **kwargs):
+#         posts_lists = Post.objects.all().order_by('createdOn')
+#
+#         context = {
+#             'post_list': posts_lists,
+#         }
+#         return render(request, 'Html/posts.html', context)
