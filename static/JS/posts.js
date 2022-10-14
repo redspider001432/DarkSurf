@@ -3,10 +3,11 @@ const open = document.getElementById('upload-text');
 const field = document.getElementById('input-post')
 const btn = document.getElementById('submit-post-id');
 let windowsContainer = document.getElementById('windows-container');
-const userContentH = document.getElementById('user-content').offsetHeight;
+const userContentH = document.getElementById('user-content');
+
 
 window.onload = function(){
-   windowsContainer.style.height = userContentH  + 650 + 'px'
+   windowsContainer.style.height = userContentH.offsetHeight  + 650 + 'px'
 }
 
 open.addEventListener('click', () => {

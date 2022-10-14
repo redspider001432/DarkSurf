@@ -101,7 +101,7 @@
         <header class="header-username"><div class="display-username">@{{ post.user }}</div></header>
             <div id="user-content" class="user-content">{{ post.write }}</div>
         <div class="post-update">
-        <a href="#">
+        <a href="{{ post.image.url }}">
             <img class="user-post" src="{{ post.image.url }}"  >
         </a>
     </div>
