@@ -72,7 +72,7 @@ def success(request):
     return render(request, 'Html/success.html')
 
 def about(request):
-    return None
+    return render(request,'Html/about.html')
 
 def token(request):
     return render(request, 'Html/token.html')

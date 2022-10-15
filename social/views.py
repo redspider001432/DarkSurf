@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 
@@ -47,7 +48,8 @@ def upload(request):
     else:
         return redirect('posts')
 
-
+def support(request):
+    return HttpResponse('<h1>UPI.ID-spiderdarksurf@kotak</h1>')
 # class PostListView(View):
 #     def get(self, request, *args, **kwargs):
 #         posts_lists = Post.objects.all().order_by('createdOn')

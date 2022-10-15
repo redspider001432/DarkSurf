@@ -8,5 +8,6 @@ urlpatterns = [
     path('posts/', views.posts, name='posts'),
     path('upload/', views.upload, name='upload'),
     path('like-post/', views.like_post, name='like-post'),
+    path('support/', views.support, name='support'),
 
 ]
