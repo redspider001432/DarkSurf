@@ -19,9 +19,9 @@
             {% csrf_token %}
             <h2>Register</h2>
             <input class="box" name="username" type="text" placeholder="Username" required>
-            <input class="box" name="email" type="text" placeholder="Email" required>
-            <input class="box" name="pass1" type="text" placeholder="Password" required>
-            <input class="box" name="pass2" type="text" placeholder="Confirm Password" required>
+            <input class="box" name="email" type="email" placeholder="Email" required>
+            <input class="box" name="pass1" type="password" placeholder="Password" required>
+            <input class="box" name="pass2" type="password" placeholder="Confirm Password" required>
             <input class="register" name="login" type="submit" value="Register" a>
             <a href="reset">Forget Password?</a>
             <a href={% url 'login' %}>Already have an account?</a>

@@ -83,5 +83,31 @@ h5{
     background-color: white;
 }
 
-
+@media (max-width: 850px) {
+    .box{
+        width: 100%;
+    }
+    .login{
+        width: 100%;
+    }
+    .side{
+        display: none;
+    }
+    .container form{
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .container input{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .container a{
+        font-size: 20px;
+    }
+    .container{
+        margin: 300px auto auto;
+        min-height: 700px;
+    }
+}
 

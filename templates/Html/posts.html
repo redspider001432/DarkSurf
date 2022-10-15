@@ -134,7 +134,7 @@
                 {% if post.no_of_likes == 0 %}
                 <a class="like-post-count">0 Dead</a>
                 {% elif post.no_of_likes == 1 %}
-                <a class="like-post-count">Dead by {{ post.no_of_likes }} person</a>
+                <a class="like-post-count">Dead by {{ post.user }}</a>
                 {% else %}
                 <a  class="like-post-count">Dead by {{ post.no_of_likes }} people</a>
                 {% endif %}

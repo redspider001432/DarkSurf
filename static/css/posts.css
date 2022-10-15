@@ -217,7 +217,8 @@
     /*position: absolute;*/
     width: 100%;
     height: 50px;
-    min-height: 500px;
+    min-height: 600px;
+    background-position: center center;
     border: 3px solid red;
 }
 
@@ -315,6 +316,10 @@ img {
         margin-top: -80px;
         width: 90%
     }
+    .post-update{
+        min-height: 600px;
+        background-position: center center;
+    }
 }
 
 @media (max-width: 900px) {
@@ -384,7 +389,7 @@ img {
     }
     .window-container {
         margin-bottom: 20px;
-        width: 400px;
+        width: 500px;
     }
 
     .submit-post {
@@ -393,6 +398,43 @@ img {
 
     .post-update {
         height: 450px;
+    }
+}
+@media (max-width: 500px) {
+    .upload-wrapper {
+        display: block;
+        width: 100%;
+    }
+
+    .main {
+        margin-top: -80px;
+        /*display: block;*/
+        width: 100%
+    }
+
+    .main1 {
+        margin-top: -60px;
+    }
+
+    .model-container {
+        width: 370px;
+        height: 350px;
+    }
+    .user-content{
+        min-width: 200px;
+        width: 390px;
+    }
+    .window-container {
+        margin-bottom: 20px;
+        width: 450px;
+    }
+
+    .submit-post {
+        margin-left: 20px;
+    }
+
+    .post-update {
+        min-height: 250px;
     }
 }
 
@@ -449,13 +491,13 @@ img {
     }
 
     .window-container {
-        width: 300px;
+        width: 400px;
         min-width: 100px;
         margin-bottom: 20px;
     }
 
     .post-update {
-        height: auto;
+        min-height: auto;
     }
 }
 

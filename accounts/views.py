@@ -79,7 +79,7 @@ def token(request):
 
 def send_register_email(email, token):
     subject = "Your account need to be verified"
-    message = f'Hi paste the link to verify your account http://127.0.0.1:8000/verify/{token}'
+    message = f'Hi paste the link to verify your account https://darksurfnet.herokuapp.com/verify/{token}'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email]
     send_mail(subject, message, email_from, recipient_list)
