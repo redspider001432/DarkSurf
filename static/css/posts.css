@@ -194,13 +194,6 @@
     background-color: #DD5353;
 }
 
-.windows-container {
-    height: 700px;
-    width: 600px;
-    background: white;
-    border-radius: 20px;
-}
-
 .header-username {
     display: flex;
     height: 40px;
@@ -218,8 +211,7 @@
     min-height: 30px;
     max-width: 550px;
     margin: 4px 40px 4px 8px;
-    font-family: "Segoe UI Variable";
-
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
 .display-username {
@@ -235,7 +227,8 @@
 .post-update {
     /*position: absolute;*/
     width: 100%;
-    height: 500px;
+    height: 50px;
+    min-height: 500px;
     border: 3px solid red;
 }
 
@@ -244,160 +237,194 @@ img {
     height: 100%;
 }
 
-
-@media (max-width: 1000px) {
-    .main1 {
-        margin-top: -40px;
-    }
-
-    .windows-container {
-        margin-bottom: 40px;
-    }
-
-    .upload-wrapper {
-        display: block;
-        width: 80%;
-    }
-
-    .main {
-        /*display: block;*/
-        margin-top: -80px;
-        width: 80%
-    }
+.window-container {
+    min-height: 120px;
+    max-height: 2000px;
+    min-width: 600px;
+    background: white;
+    border-radius: 20px;
+}
+.footer-post{
+    min-height: 50px;
+}
+.footer-post-container{
+    margin-top: 12px;
+    margin-left: 7px;
+}
+.btn-skull{
+    background: none;
+    border: none;
+    outline: none;
+    color: grey;
+}
+.btn-skull i:hover{
+    cursor: pointer;
+}
+.like-post{
+    margin-bottom: 20px;
+    margin-left: 12px;
+}
+.like-post-count{
+    font-weight: bolder;
+    text-decoration: none;
+    color: black;
 }
 
-@media (max-width: 900px) {
-    .upload-wrapper {
-        display: block;
-        width: 90%;
-    }
 
-    .main {
-        /*display: block;*/
-        width: 90%
-    }
-}
 
-@media (max-width: 700px) {
-    .upload-wrapper {
-        display: block;
-        width: 90%;
-    }
+/*@media (max-width: 1000px) {*/
+/*    .main1 {*/
+/*        margin-top: -40px;*/
+/*    }*/
 
-    .main {
-        margin-top: -80px;
-        /*display: block;*/
-        width: 90%
-    }
+/*    .windows-container {*/
+/*        margin-bottom: 40px;*/
+/*    }*/
 
-    .main1 {
-        margin-top: -60px;
-    }
+/*    .upload-wrapper {*/
+/*        display: block;*/
+/*        width: 80%;*/
+/*    }*/
 
-    .windows-container {
-        min-height: 750px;
-        margin-bottom: 20px;
-    }
+/*    .main {*/
+/*        !*display: block;*!*/
+/*        margin-top: -80px;*/
+/*        width: 80%*/
+/*    }*/
+/*}*/
 
-    .post-update {
-        height: 550px;
-    }
-}
+/*@media (max-width: 900px) {*/
+/*    .upload-wrapper {*/
+/*        display: block;*/
+/*        width: 90%;*/
+/*    }*/
 
-@media (max-width: 550px) {
-    .upload-wrapper {
-        display: block;
-        width: 100%;
-    }
+/*    .main {*/
+/*        !*display: block;*!*/
+/*        width: 90%*/
+/*    }*/
+/*}*/
 
-    .main {
-        margin-top: -80px;
-        /*display: block;*/
-        width: 100%
-    }
+/*@media (max-width: 700px) {*/
+/*    .upload-wrapper {*/
+/*        display: block;*/
+/*        width: 90%;*/
+/*    }*/
 
-    .main1 {
-        margin-top: -60px;
-    }
+/*    .main {*/
+/*        margin-top: -80px;*/
+/*        !*display: block;*!*/
+/*        width: 90%*/
+/*    }*/
 
-    .model-container {
-        width: 370px;
-        height: 350px;
-    }
-    .user-content{
-        max-width: 450px;
+/*    .main1 {*/
+/*        margin-top: -60px;*/
+/*    }*/
 
-    }
-    .windows-container {
-        height: 550px;
-        margin-bottom: 20px;
-    }
+/*    .windows-container {*/
+/*        min-height: 750px;*/
+/*        margin-bottom: 20px;*/
+/*    }*/
 
-    .submit-post {
-        margin-left: 20px;
-    }
+/*    .post-update {*/
+/*        height: 550px;*/
+/*    }*/
+/*}*/
 
-    .post-update {
-        height: 450px;
-    }
-}
+/*@media (max-width: 550px) {*/
+/*    .upload-wrapper {*/
+/*        display: block;*/
+/*        width: 100%;*/
+/*    }*/
 
-@media (max-width: 450px) {
-    .upload-wrapper {
-        display: block;
-        width: 100%;
-    }
-    .user-content{
-        max-width: 380px;
+/*    .main {*/
+/*        margin-top: -80px;*/
+/*        !*display: block;*!*/
+/*        width: 100%*/
+/*    }*/
 
-    }
+/*    .main1 {*/
+/*        margin-top: -60px;*/
+/*    }*/
 
-    .main {
-        margin-top: -80px;
-        /*display: block;*/
-        width: 100%
-    }
+/*    .model-container {*/
+/*        width: 370px;*/
+/*        height: 350px;*/
+/*    }*/
+/*    .user-content{*/
+/*        min-width: 450px;*/
+/*        */
+/*    }*/
+/*    .windows-container {*/
+/*        height: 550px;*/
+/*        margin-bottom: 20px;*/
+/*    }*/
 
-    .main1 {
-        margin-top: -60px;
-    }
+/*    .submit-post {*/
+/*        margin-left: 20px;*/
+/*    }*/
 
-    .windows-container {
-        min-height: 650px;
-        margin-bottom: 20px;
-    }
+/*    .post-update {*/
+/*        height: 450px;*/
+/*    }*/
+/*}*/
 
-    .post-update {
-        min-height: 450px;
-    }
-}
+/*@media (max-width: 450px) {*/
+/*    .upload-wrapper {*/
+/*        display: block;*/
+/*        width: 100%;*/
+/*    }*/
+/*    .user-content{*/
+/*        max-width: 380px;*/
 
-@media (max-width: 400px) {
-    .upload-wrapper {
-        display: block;
-        width: 100%;
-    }
-    .user-content{
-        max-width: 330px;
+/*    }*/
 
-    }
-    .main {
-        margin-top: -80px;
-        /*display: block;*/
-        width: 100%
-    }
+/*    .main {*/
+/*        margin-top: -80px;*/
+/*        !*display: block;*!*/
+/*        width: 100%*/
+/*    }*/
 
-    .main1 {
-        margin-top: -60px;
-    }
+/*    .main1 {*/
+/*        margin-top: -60px;*/
+/*    }*/
 
-    .windows-container {
-        min-height: 600px;
-        margin-bottom: 20px;
-    }
+/*    .windows-container {*/
+/*        min-height: 650px;*/
+/*        margin-bottom: 20px;*/
+/*    }*/
 
-    .post-update {
-        height: 400px;
-    }
-}
+/*    .post-update {*/
+/*        min-height: 450px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 400px) {*/
+/*    .upload-wrapper {*/
+/*        display: block;*/
+/*        width: 100%;*/
+/*    }*/
+/*    .user-content{*/
+/*        max-width: 330px;*/
+
+/*    }*/
+/*    .main {*/
+/*        margin-top: -80px;*/
+/*        !*display: block;*!*/
+/*        width: 100%*/
+/*    }*/
+
+/*    .main1 {*/
+/*        margin-top: -60px;*/
+/*    }*/
+
+/*    .windows-container {*/
+/*        min-height: 600px;*/
+/*        margin-bottom: 20px;*/
+/*    }*/
+
+/*    .post-update {*/
+/*        height: 400px;*/
+/*    }*/
+/*}*/
 
