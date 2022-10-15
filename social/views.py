@@ -1,18 +1,20 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
+
+from accounts.models import Profile
 from social.models import Post, LikePost
 
 
 # @login_required(login_url='/login/')
-@csrf_exempt
 @login_required(login_url='login')
 def posts(request):
-    # user_object = User.objects.get(username=request.user.username)
-    # # user_profile = Post.objects.get(user=user_object)
+    user_object = User.objects.get(username=request.user.username)
+    user_profile = Profile.objects.get(user=user_object)
 
     posts = Post.objects.all()
-    return render(request, 'Html/posts.html', {'posts': posts})
+    return render(request, 'Html/posts.html',{'user_profile':user_profile ,'posts': posts})
 
 @login_required(login_url='login')
 def like_post(request):
