@@ -89,7 +89,8 @@
                 <div style="width: 300px; margin-left: 5px" class="input-group">
                     <input name="image-file" type="file" class="form-control mx-1"
                            id="inputGroupFile02"
-                           aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".jpeg,.png,.jpg">
+                           aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept="image/jpeg"
+                           accept="*/*">
                     <label class="input-group-text" type="button" for="inputGroupFile02">Add</label>
                 </div>
                 <button id="submit-post-id" class="submit-post" type="submit" name="send-post" value="submit">Post
@@ -107,39 +108,47 @@
             </header>
             <div id="user-content" class="user-content">{{ post.write }}</div>
             {% if post.image %}
-            <div class="post-update">
-                <a href="{{ post.image.url }}">
-                    <img class="user-post" src="{{ post.image.url }}">
-                </a>
-            </div>
-            {% endif %}
-            <footer  class="footer-post">
-                <div  class="footer-post-container">
-                    <a href="/like-post?post_id={{ post.id }}">
-                    <button  id="btn-skull" class="btn-skull"><i class="fas fa-skull"></i></button>
-                        {% if post.no_of_likes%}
-                        <script>
-                            const btnSkull = document.getElementById('btn-skull')
-                            btnSkull.style.color = 'red'
-                        </script>
-                        {% elif post.no_of_likes not in post.user%}
-                        <script>
-                            const btnSkull = document.getElementById('btn-skull')
-                            btnSkull.style.color = 'grey'
-                        </script>
+                {% if post.media_type_ == "image" %}
+                    <div class="post-update">
+                        <a href="{{ post.image.url }}"> <img class="user-post" src="{{ post.image.url }}">
+                        </a>
+                    </div>
+                {% elif post.media_type_ == "video" %}
+                    <div class="post-update-video"><a href="{{ post.image.url }}">
+                        <video class="user-video"  controls autoplay>
+                            <source src="{{ post.image.url }}">
+                        </video>
                     </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+            <footer class="footer-post">
+                <div class="footer-post-container">
+                    <a href="/like-post?post_id={{ post.id }}">
+                        <button id="btn-skull" class="btn-skull"><i class="fas fa-skull"></i></button>
+                        {% if post.no_of_likes %}
+                            <script>
+                                const btnSkull = document.getElementById('btn-skull')
+                                btnSkull.style.color = 'red'
+                            </script>
+                        {% elif post.no_of_likes not in post.user %}
+                            <script>
+                                const btnSkull = document.getElementById('btn-skull')
+                                btnSkull.style.color = 'grey'
+                            </script>
+                            </a>
+                        {% endif %}
+                </div>
+                {#            {% for profile in  %}#}
+                <div class="like-post">
+                    {% if post.no_of_likes == 0 %}
+                        <a class="like-post-count">0 Dead</a>
+                    {% elif post.no_of_likes == 1 %}
+                        <a class="like-post-count">Dead by {{ post.no_of_likes }} Person</a>
+                    {% else %}
+                        <a class="like-post-count">Dead by {{ post.no_of_likes }} People</a>
                     {% endif %}
                 </div>
-{#            {% for profile in  %}#}
-            <div class="like-post">
-                {% if post.no_of_likes == 0 %}
-                <a class="like-post-count">0 Dead</a>
-                {% elif post.no_of_likes == 1 %}
-                <a class="like-post-count">Dead by {{ post.no_of_likes }} Person</a>
-                {% else %}
-                <a  class="like-post-count">Dead by {{ post.no_of_likes }} People</a>
-                {% endif %}
-            </div>
             </footer>
         </div>
     </section>

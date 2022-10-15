@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -152,8 +152,6 @@
 }
 
 
-
-
 .submit-post {
     margin-top: -100px;
     padding: 5px 35px;
@@ -189,7 +187,7 @@
     border-bottom: 1px solid black;
 }
 
-.user-content{
+.user-content {
     width: 100%;
     max-width: 590px;
     overflow-wrap: break-word;
@@ -246,32 +244,50 @@ img {
     background: white;
     border-radius: 20px;
 }
-.footer-post{
+
+.footer-post {
     min-height: 50px;
 }
-.footer-post-container{
+
+.footer-post-container {
     margin-top: 12px;
     margin-left: 7px;
 }
-.btn-skull{
+
+.btn-skull {
     background: none;
     border: none;
     outline: none;
     color: grey;
 }
-.btn-skull i:hover{
+
+.btn-skull i:hover {
     cursor: pointer;
 }
-.like-post{
+
+.like-post {
     margin-bottom: 20px;
     margin-left: 12px;
 }
-.like-post-count{
+
+.like-post-count {
     font-weight: bolder;
     text-decoration: none;
     color: black;
 }
 
+.post-update-video {
+    width: 100%;
+    height: auto;
+    border: 3px solid red;
+    min-height: 100px;
+}
+
+.user-video {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
 
 
 @media (max-width: 1400px) {
@@ -296,6 +312,7 @@ img {
         width: 70%
     }
 }
+
 @media (max-width: 1000px) {
     .main1 {
         margin-top: -40px;
@@ -316,7 +333,8 @@ img {
         margin-top: -80px;
         width: 90%
     }
-    .post-update{
+
+    .post-update {
         min-height: 600px;
         background-position: center center;
     }
@@ -327,10 +345,12 @@ img {
         display: block;
         width: 90%;
     }
-    .window-container{
+
+    .window-container {
         min-width: 400px;
         width: 600px;
     }
+
     .main {
         /*display: block;*/
         width: 90%
@@ -383,10 +403,12 @@ img {
         width: 370px;
         height: 350px;
     }
-    .user-content{
+
+    .user-content {
         min-width: 200px;
         width: 390px;
     }
+
     .window-container {
         margin-bottom: 20px;
         width: 500px;
@@ -400,6 +422,7 @@ img {
         height: 450px;
     }
 }
+
 @media (max-width: 500px) {
     .upload-wrapper {
         display: block;
@@ -420,10 +443,12 @@ img {
         width: 370px;
         height: 350px;
     }
-    .user-content{
+
+    .user-content {
         min-width: 200px;
         width: 390px;
     }
+
     .window-container {
         margin-bottom: 20px;
         width: 450px;
@@ -443,7 +468,8 @@ img {
         display: block;
         width: 100%;
     }
-    .user-content{
+
+    .user-content {
         min-width: 350px;
         display: flex;
         width: 200px;
@@ -475,11 +501,13 @@ img {
         display: block;
         width: 100%;
     }
-    .user-content{
+
+    .user-content {
         min-width: 200px;
         width: 300px;
 
     }
+
     .main {
         margin-top: -80px;
         /*display: block;*/
