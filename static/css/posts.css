@@ -278,12 +278,13 @@ img {
 
 .post-update-video {
     width: 100%;
+    min-width: 200px;
     height: auto;
     border: 3px solid red;
     min-height: 100px;
 }
 
-.user-video {
+video {
     display: flex;
     margin: auto;
     justify-content: center;
@@ -381,6 +382,7 @@ img {
     .post-update {
         height: 550px;
     }
+
 }
 
 @media (max-width: 580px) {
@@ -460,6 +462,10 @@ img {
 
     .post-update {
         min-height: 250px;
+    }
+    video{
+        min-width: 100px;
+        width: 70%;
     }
 }
 

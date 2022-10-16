@@ -89,8 +89,9 @@
                 <div style="width: 300px; margin-left: 5px" class="input-group">
                     <input name="image-file" type="file" class="form-control mx-1"
                            id="inputGroupFile02"
-                           aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept="video/mp4,image/jpeg,image/gif,image/png"
-                           >
+                           aria-describedby="inputGroupFileAddon04" aria-label="Upload"
+                           accept="video/mp4,image/jpeg,image/gif,image/png"
+                    >
                     <label class="input-group-text" type="button" for="inputGroupFile02">Add</label>
                 </div>
                 <button id="submit-post-id" class="submit-post" type="submit" name="send-post" value="submit">Post
@@ -115,10 +116,9 @@
                     </div>
                 {% elif post.media_type_ == "video" %}
                     <div class="post-update-video"><a href="{{ post.image.url }}">
-                        <video class="user-video"  controls autoplay>
+                        <video id="videoId" class="user-video" controls autoplay muted>
                             <source src="{{ post.image.url }}">
-                        </video>
-                    </a>
+                        </video></a>
                     </div>
                 {% endif %}
             {% endif %}
@@ -159,6 +159,11 @@
     if (window.history.replaceState) {
         window.history.replaceState(null, null, window.location.href);
     }
+    let myvid = $('#videoId')[0];
+    $(window).scroll(function () {
+        let scroll = $(this).scrollTop();
+        scroll > 70 ? myvid.pause() : myvid.play()
+    })
 </script>
 <script src={% static 'JS/posts.js' %}></script>
 </body>
