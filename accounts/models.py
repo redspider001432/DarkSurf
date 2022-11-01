@@ -12,6 +12,5 @@ class Profile(models.Model):
     userId = models.IntegerField(default=1)
     createdOn = models.DateTimeField(default=datetime.now())
     isVerified = models.BooleanField(default=False)
-
     def __str__(self):
         return self.user.username

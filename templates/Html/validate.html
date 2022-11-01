@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Validate</title>
+</head>
+<body>
+    <form class="form" action="" method="post">
+        {% csrf_token %}
+        <div class="ask">Content on this site may inappropriate.Are you 18 above</div>
+        <button type="submit" class="btn">Yes</button>
+        <a class="btn" href={% url 'register' %}>No</a>
+    </form>
+</body>
+</html>

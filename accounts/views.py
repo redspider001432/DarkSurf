@@ -56,7 +56,6 @@ def register(request):
                 user.set_password(password2)
                 auth_token = str(uuid.uuid4())
                 user.save()
-
                 user_model = User.objects.get(username=username)
                 user_profile = Profile.objects.create(user=user_model, userId=user_model.id, auth_token=auth_token)
                 user_profile.save()
@@ -108,3 +107,5 @@ def logout(request):
     auth.logout(request)
     return redirect('login')
 
+def privacy(request):
+    return render(request,'Html/privacy.html')

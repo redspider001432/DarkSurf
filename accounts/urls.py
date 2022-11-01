@@ -13,5 +13,6 @@ urlpatterns = [
     path('verify/<auth_token>', views.verify, name='verify'),
     path('error/', views.error, name='error'),
     path('logout/', views.logout, name='logout'),
+    path('privacy&policy/', views.privacy, name='privacy&policy'),
 
 ]

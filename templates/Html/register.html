@@ -22,9 +22,10 @@
             <input class="box" name="email" type="email" placeholder="Email" required>
             <input class="box" name="pass1" type="password" placeholder="Password" required>
             <input class="box" name="pass2" type="password" placeholder="Confirm Password" required>
-            <input class="register" name="login" type="submit" value="Register" a>
+            <input class="register" name="login" type="submit" value="Register">
             <a href="reset">Forget Password?</a>
             <a href={% url 'login' %}>Already have an account?</a>
+            <a href={% url 'privacy&policy' %}>Privacy and Policy</a>
         </form>
         <div class="side">
             <img src={% static 'images/hack2.jpg'%}>
